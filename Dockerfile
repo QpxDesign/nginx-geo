@@ -31,8 +31,8 @@ RUN mkdir /usr/share/nginx/modules/
 RUN mv /usr/lib/nginx-geo/nginx-1.24.0/objs/ngx_http_geoip2_module.so /usr/share/nginx/modules/
 WORKDIR /usr/lib/nginx-geo
 
-
-EXPOSE 8080
+EXPOSE 80
+EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
 #RUN sed -i "1iload_module modules/ngx_http_geoip2_module.so;" /etc/nginx/nginx.conf
