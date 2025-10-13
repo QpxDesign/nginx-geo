@@ -1,8 +1,21 @@
 # nginx-geo:
 
-## a script to add ip address lookups to your nginx.conf
+a script to add ip address lookups to your nginx.conf
 
-### Install
+## Install
+
+### Docker
+
+1. Clone this repository
+2. Create the image: `docker build . -t nginx-geo`
+3. Download the [MaxMind Databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/) into `./db`
+4. Make a directory for your sites: `mkdir sites`
+5. Make a directory for your logs: `mkdir logs`
+6. Make a directory for your configuration files: `mkdir conf && mkdir conf/sites`
+7. Edit the `nginx.conf` at `conf/nginx.conf`
+8. Run the image from the `compose.yml` file (edit to your needs): `docker compose up -d`
+
+### System
 
 1. Clone this repository
 2. Edit `nginx-geo.sh` with the path to nginx-geo and your currently installed version of nginx
