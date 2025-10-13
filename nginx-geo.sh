@@ -1,5 +1,8 @@
-PATH_TO_NGINXGEO="/root/nginx-geo"
-NGINX_VERSION="1.28.0"
+#!/bin/bash
+PATH_TO_NGINXGEO="/user/lib/nginx-geo"
+
+# Dynamically Set NGINX Version:
+NGINX_VERSION=$(nginx -v 2>&1 | grep -oP 'nginx/\K[0-9.]+')
 
 # 1. Install libmaxminddb (https://github.com/maxmind/libmaxminddb)
 wget https://github.com/maxmind/libmaxminddb/releases/download/1.12.2/libmaxminddb-1.12.2.tar.gz

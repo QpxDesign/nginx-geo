@@ -8,7 +8,7 @@
 2. Edit `nginx-geo.sh` with the path to nginx-geo and your currently installed version of nginx
 3. Run the script: `sudo bash nginx-geo.sh`
 4. Download [MaxMind Databases](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data/)
-5. Add the following to the `http` block of your `nginx.conf`: ()
+5. Add the following to the `http` block of your `nginx.conf`:
 
 ```
     geoip2 /root/nginx-geo/db/GeoLite2-ASN.mmdb { # REPLACE WITH PATH TO GEOLITE DB LOCATION
