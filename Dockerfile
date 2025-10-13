@@ -34,5 +34,8 @@ WORKDIR /usr/lib/nginx-geo
 EXPOSE 80
 EXPOSE 443
 
+# Lets Encrypt
+COPY ./conf/letsencrypt /etc/letsencrypt
+
 CMD ["nginx", "-g", "daemon off;"]
 #RUN sed -i "1iload_module modules/ngx_http_geoip2_module.so;" /etc/nginx/nginx.conf
