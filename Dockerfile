@@ -3,6 +3,8 @@ FROM ubuntu:24.04
 RUN apt-get update
 RUN apt install -y curl gnupg2 ca-certificates lsb-release ubuntu-keyring libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev # NGINX deps
 RUN apt install -y wget make build-essential git # Other deps
+RUN apt install -y certbot python3-certbot-nginx # Certbot
+RUN apt install -y nginx-extras
 RUN apt update && apt-get install nginx=1.24.0-2ubuntu7.5 -y
 
 RUN mkdir /usr/lib/nginx-geo
